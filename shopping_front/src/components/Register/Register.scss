@@ -1,0 +1,18 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+
+    & > div {
+      display: flex;
+      width: 300px;
+      justify-content: space-between;
+    }
+  }
+}
