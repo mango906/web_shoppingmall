@@ -12,7 +12,9 @@ public class User {
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     private String username;
+    private String number;
     private String phone;
+    private String number_address;
     private String address;
     private String email;
     private LocalDateTime created;
