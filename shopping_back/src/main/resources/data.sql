@@ -8,3 +8,15 @@ insert into user(account, password, username, email, created, updated) values
 ('user5', '1234', 'username 5', 'user5@dgsw.hs.kr', now(), now());
 
 select * from user;
+
+insert into product(image, name, content, cost, type) values('image/image.jpg', '흰식 티셔츠', '흰색 티셔츠입니다.', 5000, 0);
+
+select * from product;
+
+show create database shopping;
+
+ALTER DATABASE shopping DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER table product DEFAULT CHARACTER SET utf8;
+alter table product modify column name varchar(30) character set utf8;
+alter table product modify column image varchar(50) character set utf8;
+alter table product modify column content varchar(100) character set utf8;

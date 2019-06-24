@@ -8,7 +8,7 @@ public class Product {
     private String image;
     private String name;
     private String content;
-    private int sailCost;
+//    private int sailCost;
     private int type;
-    private int price;
+    private int cost;
 }
