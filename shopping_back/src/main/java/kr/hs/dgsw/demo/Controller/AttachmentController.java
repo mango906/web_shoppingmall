@@ -2,6 +2,7 @@ package kr.hs.dgsw.demo.Controller;
 
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,11 +15,11 @@ import java.net.URLConnection;
 
 @RestController
 public class AttachmentController {
-    @GetMapping("/api/attachment")
-    public void download(HttpServletRequest request, HttpServletResponse response){
+    @GetMapping("/api/attachment/{name}")
+    public void download(@PathVariable String name, HttpServletRequest request, HttpServletResponse response){
         try{
-            String filePath = "D:/github/web_shoppingmall/web_shoppingmall/shopping_back/image/image.jpg";
-            String fileName = "image.jpg";
+            String filePath = "D:/github/web_shoppingmall/web_shoppingmall/shopping_back/image/" + name;
+            String fileName = name;
             File file = new File(filePath);
             if(file.exists() == false) return;
 

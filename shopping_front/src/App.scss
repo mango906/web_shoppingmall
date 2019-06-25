@@ -39,5 +39,9 @@
 
 .app-body {
   position: absolute;
+  display: flex;
+  left: 0;
+  right: 0;
+  justify-content: center;
   top: 202px;
 }

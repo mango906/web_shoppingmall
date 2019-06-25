@@ -9,14 +9,15 @@ insert into user(account, password, username, email, created, updated) values
 
 select * from user;
 
-insert into product(image, name, content, cost, type) values('image/image.jpg', '흰식 티셔츠', '흰색 티셔츠입니다.', 5000, 0);
+delete  from product where image like 'image4.jpg';
 
-select * from product;
+insert into product(image, name, content, cost, type) values('image7.jpg', '긴 치마', '상당히 길어요', 35000, 3);
 
-show create database shopping;
+
+
 
 ALTER DATABASE shopping DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 ALTER table product DEFAULT CHARACTER SET utf8;
-alter table product modify column name varchar(30) character set utf8;
+alter table basket modify column accountId varchar(20) character set utf8;
 alter table product modify column image varchar(50) character set utf8;
 alter table product modify column content varchar(100) character set utf8;

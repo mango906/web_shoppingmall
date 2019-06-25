@@ -7,4 +7,12 @@
         select * from product;
     </select>
 
+    <select id="selectByType" resultType="kr.hs.dgsw.demo.Domain.Product" parameterType="Long">
+        select * from product where type=#{type}
+    </select>
+
+    <select id="selectById" resultType="kr.hs.dgsw.demo.Domain.Product" parameterType="Long">
+        select * from product where id=#{id}
+    </select>
+
 </mapper>

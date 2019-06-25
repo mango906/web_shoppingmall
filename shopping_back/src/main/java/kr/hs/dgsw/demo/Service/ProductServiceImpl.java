@@ -17,4 +17,14 @@ public class ProductServiceImpl implements ProductService{
     public List<Product> select() {
         return this.productMapper.select();
     }
+
+    @Override
+    public List<Product> selectByType(Long type) {
+        return this.productMapper.selectByType(type);
+    }
+
+    @Override
+    public Product selectById(Long id) {
+        return this.productMapper.selectById(id);
+    }
 }

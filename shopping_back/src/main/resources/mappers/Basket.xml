@@ -3,6 +3,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="kr.hs.dgsw.demo.Domain.BasketMapper">
-
+    <insert id="add" parameterType="kr.hs.dgsw.demo.Domain.Basket">
+        insert into basket(accountId, productId, count) values(#{accountId}, #{productId}, #{count})
+        <selectKey keyProperty="id" resultType="Long">
+            select last_insert_id()
+        </selectKey>
+    </insert>
 
 </mapper>

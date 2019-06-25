@@ -5,5 +5,9 @@ import kr.hs.dgsw.demo.Domain.Product;
 import java.util.List;
 
 public interface ProductService {
-    public List<Product> select();
+    List<Product> select();
+
+    List<Product> selectByType(Long type);
+
+    Product selectById(Long id);
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Main.scss';
 import Card from '../Common/Card';
 import { inject, observer } from 'mobx-react';
+import { withRouter } from 'react-router-dom';
 
 @inject('stores')
 @observer
@@ -22,13 +23,19 @@ class Main extends Component {
     });
   }
 
+  handleRedirect = idx => {
+    console.log('idx', idx);
+    const { history } = this.props;
+    history.push(`/detail/${idx}`);
+  };
+
   render() {
     const { data } = this.state;
 
     const items =
       data &&
       data.map(data => {
-        return <Card data={data} key={data.id} />;
+        return <Card data={data} key={data.id} handleRedirect={this.handleRedirect} />;
       });
 
     return (

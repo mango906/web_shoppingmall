@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class Basket {
     private Long id;
-    private String account;
+    private Long accountId;
     private Long productId;
     private Long count;
 }

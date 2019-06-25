@@ -833,7 +833,7 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="211" parent="9" name="bakset">
+    <table id="211" parent="9" name="basket">
       <Collation>latin1_swedish_ci</Collation>
     </table>
     <table id="212" parent="9" name="comment">
@@ -850,9 +850,9 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="216" parent="211" name="account">
+    <column id="216" parent="211" name="accountId">
       <Position>2</Position>
-      <DataType>varchar(20)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="217" parent="211" name="productId">
